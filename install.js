@@ -70,8 +70,8 @@ kew.resolve(true)
   })
   .then(function () {
     var location = getTargetPlatform() === 'win32' ?
-        path.join(pkgPath, 'bin', 'phantomjs.exe') :
-        path.join(pkgPath, 'bin' ,'phantomjs')
+        path.win32.join(pkgPath, 'bin', 'phantomjs.exe') :
+        path.posix.join(pkgPath, 'bin' ,'phantomjs')
 
     try {
       // Ensure executable is executable by all users
